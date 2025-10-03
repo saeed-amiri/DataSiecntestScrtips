@@ -1,0 +1,1 @@
+* 7-21 * 3,6,11 1-5 /path/to/exam_NAME/exam_bash/exam.sh

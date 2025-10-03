@@ -1,0 +1,87 @@
+Fri Oct  3 10:01:49 UTC 2025
+
+------------- Saeed-Amiri ----------------
+---------------- JQ-Exam -----------------
+
+1. Statement of question 1
+Command: jq -r '.[] | "\(.name)\t\(. | keys_unsorted | length)"' people.json | head -n 12
+Luke Skywalker	17
+C-3PO	17
+R2-D2	17
+Darth Vader	17
+Leia Organa	17
+Owen Lars	17
+Beru Whitesun lars	17
+R5-D4	17
+Biggs Darklighter	17
+Obi-Wan Kenobi	17
+Anakin Skywalker	17
+Wilhuff Tarkin	17
+Answer: Each document has 17 attributes
+Main attribute(s): name
+
+----------------------------------------
+
+2. Statement of question 2
+Command: jq '[.[] | select(.birth_year == "unknown")] | length' people.json
+42
+Answer: 6 unknown values for birth_year
+Main attribute(s): birth_year
+
+----------------------------------------
+
+3. Statement of question 3
+Command: jq -r '.[] | .created[0:10]' people.json | head -n 10
+2014-12-09
+2014-12-10
+2014-12-10
+2014-12-10
+2014-12-10
+2014-12-10
+2014-12-10
+2014-12-10
+2014-12-10
+2014-12-10
+Answer: First 10 creation dates displayed
+Main attribute(s): created
+
+----------------------------------------
+
+4. Statement of question 4
+Command: jq -r '.[] | {id: .url, birth_year}' people.json | sort -k2 | uniq -d
+{
+}
+  "birth_year": "19BBY"
+  "birth_year": "41.9BBY"
+  "birth_year": "52BBY"
+  "birth_year": "72BBY"
+  "birth_year": "82BBY"
+  "birth_year": "92BBY"
+  "birth_year": "unknown"
+Answer: IDs with the same birth date
+Main attribute(s): id, birth_year
+
+----------------------------------------
+
+5. Statement of question 5
+Command: jq -r '.[] | [(.films // [] | length), .name] | @tsv' people.json | head -n 10
+5	Luke Skywalker
+6	C-3PO
+7	R2-D2
+4	Darth Vader
+5	Leia Organa
+3	Owen Lars
+3	Beru Whitesun lars
+1	R5-D4
+1	Biggs Darklighter
+6	Obi-Wan Kenobi
+Answer: First 10 lines: number of films + character name
+Main attribute(s): films, name
+
+----------------------------------------
+
+
+---------------- BONUS ----------------
+
+All old files in 'bonus' are deleted
+All done! Results saved in res_jq.txt and bonus/

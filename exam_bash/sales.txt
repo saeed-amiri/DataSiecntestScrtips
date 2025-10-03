@@ -1,0 +1,21 @@
+Wed Oct  1 13:08:41 UTC 2025
+rtx3060: 12
+rtx3070: 11
+rtx3080: 11
+rx6900:  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+rx6700:  14
+Wed Oct  1 13:10:03 UTC 2025
+Wed Oct  1 13:12:17 UTC 2025
+Wed Oct  1 13:12:17 UTC 2025
+rtx3060: 0
+rtx3070: 5
+rtx3080: 5
+rx6700: 12
+rx6900xt: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+----
